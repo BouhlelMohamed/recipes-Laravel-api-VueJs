@@ -18,5 +18,4 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware'=>['web']],function(){
-    Route::resource('les-recettes','RecipesController');
 });

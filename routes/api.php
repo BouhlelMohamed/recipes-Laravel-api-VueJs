@@ -26,8 +26,10 @@ Route::post('register', 'API\UsersController@register');
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('details', 'API\UsersController@details');
+    Route::post('new-recipes', 'API\RecipesController@new');
+    Route::put('update-recipes', 'API\RecipesController@update');
 });
 
 
 // recipes
-Route::post('new-recipes', 'API\RecipesController@new');
+Route::post('find-all-recipes', 'API\RecipesController@findAll');
