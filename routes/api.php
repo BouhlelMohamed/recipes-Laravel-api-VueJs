@@ -20,9 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('recipes','RecipesController@findAll');
 
+// users
 Route::post('login', 'API\UsersController@login');
 Route::post('register', 'API\UsersController@register');
 
-Route::group(['middleware' => 'auth:api'], function(){
-Route::post('details', 'API\UsersController@details');
+Route::group(['middleware' => 'auth:api'], function () {
+    Route::post('details', 'API\UsersController@details');
 });
+
+
+// recipes
+Route::post('new-recipes', 'API\RecipesController@new');

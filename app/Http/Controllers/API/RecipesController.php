@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\App;
 
 class RecipesController extends Controller
 {
-    public function findAll(){
+    public function new(){
         return Recipes::all();
     }
 }
