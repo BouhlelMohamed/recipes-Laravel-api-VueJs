@@ -17,6 +17,7 @@ class CreateRecipesTable extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

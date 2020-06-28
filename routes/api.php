@@ -25,7 +25,10 @@ Route::post('login', 'API\UsersController@login');
 Route::post('register', 'API\UsersController@register');
 
 Route::group(['middleware' => 'auth:api'], function () {
+    // users
     Route::post('details', 'API\UsersController@details');
+
+    // recipes
     Route::post('new-recipes', 'API\RecipesController@new');
     Route::put('update-recipes', 'API\RecipesController@update');
 });
