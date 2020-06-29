@@ -42,6 +42,14 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('new-subcategory', 'API\SubCategorysController@new');
     Route::post('update-subcategory', 'API\SubCategorysController@update');
     Route::delete('delete-subcategory/{id}','API\SubCategorysController@deleteSubCategory');
+
+    // SubCategory - Category
+    Route::post('new-subcategory-category', 'API\SubCategoryCategoryController@addSubCategoryToCategory');
+    Route::post('delete-subcategory-category', 'API\SubCategoryCategoryController@deleteSubCategoryToCategory');
+
+    // Recipes - SubCategory 
+    Route::post('new-recipes-subcategory', 'API\RecipesSubCategoryController@addRecipesToSubCategory');
+    Route::post('delete-recipes-subcategory', 'API\RecipesSubCategoryController@deleteRecipesToSubCategory');
 });
 
 // recipes

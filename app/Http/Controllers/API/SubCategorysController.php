@@ -40,8 +40,4 @@ class SubCategorysController extends Controller
         return response()->json($subCategory,200);
     }
 
-    public function addSubCategoryToCategory(Request $request){
-        dump($request);
-    }
-
 }
