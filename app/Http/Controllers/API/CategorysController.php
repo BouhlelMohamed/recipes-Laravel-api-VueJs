@@ -30,7 +30,7 @@ class CategorysController extends Controller
         // return categorys::all();
     }
 
-    public function deletecategorys(int $iCategoryId){
+    public function deletecategory(int $iCategoryId){
         Category::find($iCategoryId)->delete();
         return response()->json(null,204);
     }
@@ -39,4 +39,5 @@ class CategorysController extends Controller
         $category = Category::find($iCategoryId);
         return response()->json($category,200);
     }
+
 }

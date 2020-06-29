@@ -33,10 +33,15 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('update-recipes', 'API\RecipesController@update');
     Route::delete('delete-recipes/{id}','API\RecipesController@deleteRecipes');
 
-     // Category
-     Route::post('new-category', 'API\CategoryController@new');
-     Route::post('update-category', 'API\CategoryController@update');
-     Route::delete('delete-category/{id}','API\CategoryController@deleteCategory');
+    // Category
+    Route::post('new-category', 'API\CategorysController@new');
+    Route::post('update-category', 'API\CategorysController@update');
+    Route::delete('delete-category/{id}','API\CategorysController@deleteCategory');
+
+    // SubCategory
+    Route::post('new-subcategory', 'API\SubCategorysController@new');
+    Route::post('update-subcategory', 'API\SubCategorysController@update');
+    Route::delete('delete-subcategory/{id}','API\SubCategorysController@deleteSubCategory');
 });
 
 // recipes
@@ -44,5 +49,9 @@ Route::post('find-all-recipes', 'API\RecipesController@findAll');
 Route::get('find-one-recipes/{id}','API\RecipesController@findOneRecipe');
 
 // Category 
-Route::post('find-all-category', 'API\RecipesController@findAll');
-Route::get('find-one-category/{id}','API\CategoryController@findOneCategory');
+Route::post('find-all-category', 'API\CategorysController@findAll');
+Route::get('find-one-category/{id}','API\CategorysController@findOneCategory');
+
+// SubCategory 
+Route::post('find-all-subcategory', 'API\SubCategorysController@findAll');
+Route::get('find-one-subcategory/{id}','API\SubCategorysController@findOneSubCategory');

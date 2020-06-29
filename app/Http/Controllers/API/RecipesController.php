@@ -15,6 +15,9 @@ class RecipesController extends Controller
         $recipe = new Recipes;
         $recipe->name       = $request->name;
         $recipe->description= $request->description;
+        $recipe->number_of_person       = $request->number_of_person;
+        $recipe->cooking_time= $request->cooking_time;
+        $recipe->preparation_time= $request->preparation_time;
         if($recipe->save()){
             // GET ID FOR INSERT BEST IMAGE WITH ID . EXT
             $file = $request->file('image');
@@ -33,6 +36,9 @@ class RecipesController extends Controller
         $recipe = Recipes::find($request->id);
         $recipe->name = $request->name;
         $recipe->description = $request->description;
+        $recipe->number_of_person       = $request->number_of_person;
+        $recipe->cooking_time= $request->cooking_time;
+        $recipe->preparation_time= $request->preparation_time;
         if($recipe->save()){
             // GET ID FOR INSERT BEST IMAGE WITH ID . EXT
             $file = $request->file('image');
