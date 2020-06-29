@@ -7,7 +7,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-text text-center">
-                        <h2>Blog</h2>
+                        <h2>Recettes</h2>
                     </div>
                 </div>
             </div>
@@ -27,9 +27,6 @@
 
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                            <li class="page-item active"><a class="page-link" href="#">01.</a></li>
-                            <li class="page-item"><a class="page-link" href="#">02.</a></li>
-                            <li class="page-item"><a class="page-link" href="#">03.</a></li>
                         </ul>
                     </nav>
                 </div>
